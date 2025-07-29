@@ -12,6 +12,7 @@ import Checkout from './components/Checkout';
 import FilterSidebar from './components/FilterSidebar';
 import { products } from './data/products';
 import { Product } from './types';
+import Footer from './components/Footer';
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -145,7 +146,6 @@ function App() {
             isOpen={isCheckoutOpen}
             onClose={() => setIsCheckoutOpen(false)}
           />
-
           <Toaster
             position="top-right"
             toastOptions={{
@@ -156,6 +156,7 @@ function App() {
               },
             }}
           />
+          <Footer />
         </div>
       </CartProvider>
     </AuthProvider>
